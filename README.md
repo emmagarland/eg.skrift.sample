@@ -1,7 +1,7 @@
 # eg.skrift.sample
 Sample code for Skrift Article
 
-Rebuild all and the nuget packages will be generated. 
+Rebuild all and the nuget packages will be installed. 
 
 The login details are:
 
