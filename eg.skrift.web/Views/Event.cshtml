@@ -1,0 +1,12 @@
+﻿@inherits UmbracoTemplatePage<eg.skrift.data.Event>
+<div id="event">
+    <div class="container-fluid" id="event">
+        @if (Model != null)
+        {
+            <div class="rating">
+                <h1>@Model.Content.EventTitle</h1>
+                <h2>@Model.Content.EventSummary</h2>
+            </div>
+        }
+    </div>
+</div>
