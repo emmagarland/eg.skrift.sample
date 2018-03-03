@@ -20,16 +20,24 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace eg.skrift.data
 {
-	/// <summary>Event</summary>
-	[PublishedContentModel("event")]
-	public partial class Event : PublishedContentModel, IEventRating
+	// Mixin content Type 1147 with alias "eventRating"
+	/// <summary>Event Rating</summary>
+	public partial interface IEventRating : IPublishedContent
+	{
+		/// <summary>Rating</summary>
+		string Rating { get; }
+	}
+
+	/// <summary>Event Rating</summary>
+	[PublishedContentModel("eventRating")]
+	public partial class EventRating : PublishedContentModel, IEventRating
 	{
 #pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "event";
+		public new const string ModelTypeAlias = "eventRating";
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 #pragma warning restore 0109
 
-		public Event(IPublishedContent content)
+		public EventRating(IPublishedContent content)
 			: base(content)
 		{ }
 
@@ -40,27 +48,9 @@ namespace eg.skrift.data
 		}
 #pragma warning restore 0109
 
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Event, TValue>> selector)
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<EventRating, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Event Summary: Summary of the Event
-		///</summary>
-		[ImplementPropertyType("eventSummary")]
-		public string EventSummary
-		{
-			get { return this.GetPropertyValue<string>("eventSummary"); }
-		}
-
-		///<summary>
-		/// Event Title: Title of the Event
-		///</summary>
-		[ImplementPropertyType("eventTitle")]
-		public string EventTitle
-		{
-			get { return this.GetPropertyValue<string>("eventTitle"); }
 		}
 
 		///<summary>
@@ -69,7 +59,10 @@ namespace eg.skrift.data
 		[ImplementPropertyType("rating")]
 		public string Rating
 		{
-			get { return eg.skrift.data.EventRating.GetRating(this); }
+			get { return GetRating(this); }
 		}
+
+		/// <summary>Static getter for Rating</summary>
+		public static string GetRating(IEventRating that) { return that.GetPropertyValue<string>("rating"); }
 	}
 }

@@ -1,4 +1,6 @@
-﻿using Umbraco.Core.Models;
+﻿using System;
+using System.Globalization;
+using Umbraco.Core.Models;
 
 namespace eg.skrift.data
 {
@@ -8,6 +10,24 @@ namespace eg.skrift.data
         {
         }
 
-        public int EventRating { get; set; }
+        /// <summary>
+        /// Get the rating from Umbraco
+        /// </summary>
+        public int EventRating
+        {
+            get
+            {
+                try
+                {
+                    int.TryParse(Rating, out int rating);
+                    return rating;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Issue when parsing the rating to an int", e);
+                    throw;
+                }
+            }
+        }
     }
 }

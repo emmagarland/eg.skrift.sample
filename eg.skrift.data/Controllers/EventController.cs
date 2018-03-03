@@ -15,12 +15,12 @@ namespace eg.skrift.data.Controllers
         public override ActionResult Index(RenderModel model)
         {
             var typedModel = model.As<EventDetail>();
-            typedModel.EventRating = GetEventRating();
             return CurrentTemplate(typedModel);
         }
 
         /// <summary>
-        /// Gets the rating for an event
+        /// Legacy: Gets the rating for an event
+        /// Used in earlier code example
         /// </summary>
         /// <returns></returns>
         private int GetEventRating()

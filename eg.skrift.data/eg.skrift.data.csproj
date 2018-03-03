@@ -250,6 +250,9 @@
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="EventDetail.cs" />
+    <Compile Include="EventRating.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Feature.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
