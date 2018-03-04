@@ -2,7 +2,7 @@
 
 namespace eg.skrift.data.Models
 {
-    public class EventDetail : EventBase, IEventDetail
+    public abstract class EventDetail : EventBase, IEventDetail
     {
         protected EventDetail(IPublishedContent content) : base(content)
         {
@@ -11,6 +11,6 @@ namespace eg.skrift.data.Models
         /// <summary>
         /// Get the rating from Umbraco
         /// </summary>
-        public int EventRating { get; set; }
+        public abstract int EventRating { get; set; }
     }
 }

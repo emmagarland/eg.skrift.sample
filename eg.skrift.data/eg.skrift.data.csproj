@@ -246,7 +246,7 @@
     <Compile Include="CMS\ILogger.cs" />
     <Compile Include="CMS\ILoggerFactory.cs" />
     <Compile Include="CMS\UmbracoLogger.cs" />
-    <Compile Include="Controllers\EventBaseController.cs" />
+    <Compile Include="Controllers\EventDetailController.cs" />
     <Compile Include="CMS\Global.cs" />
     <Compile Include="Factories\IContentFetcherFactory.cs" />
     <Compile Include="CMS\IUmbracoContentFetcher.cs" />
@@ -287,6 +287,7 @@
     <Compile Include="Models\Home.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\IEventDetail.cs" />
     <Compile Include="Models\IEventRating.cs" />
     <Compile Include="Models\Image.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
@@ -294,8 +295,8 @@
     <Compile Include="Models\InterviewEvent.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\InterviewEventViewModel.cs" />
-    <Compile Include="Models\LiveEventViewModel.cs" />
+    <Compile Include="Models\InterviewEvent.cs" />
+    <Compile Include="Models\LiveEvent.cs" />
     <Compile Include="Models\LiveEvent.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
@@ -314,7 +315,7 @@
     <Compile Include="Models\Person.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\PrerecordedEventViewModel.cs" />
+    <Compile Include="Models\PrerecordedEvent.cs" />
     <Compile Include="Models\PrerecordedEvent.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>

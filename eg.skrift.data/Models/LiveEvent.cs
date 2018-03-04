@@ -2,10 +2,7 @@
 {
     public partial class LiveEvent : IEventDetail
     {
-        public int EventRating
-        {
-            get => GetEventRating();
-        }
+        public int EventRating => GetEventRating();
 
         /// <summary>
         /// Gets the rating for an event.
