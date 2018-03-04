@@ -246,7 +246,7 @@
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\EventController.cs" />
-    <Compile Include="Event.generated.cs">
+    <Compile Include="EventBase.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="EventDetail.cs" />
@@ -269,17 +269,19 @@
     <Compile Include="Image.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterviewEvent.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LiveEvent.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Member.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModelsBuilder.cs">
-      <Generator>UmbracoModelsBuilder</Generator>
-      <LastGenOutput>ModelsBuilder.generated.cs</LastGenOutput>
-    </Compile>
     <Compile Include="ModelsBuilder.generated.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="NavigationBase.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
@@ -288,6 +290,16 @@
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Person.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrerecordedEvent.cs" />
+    <Compile Include="InterviewEvent.cs" />
+    <Compile Include="LiveEvent.cs" />
+    <Compile Include="ModelsBuilder.cs">
+      <Generator>UmbracoModelsBuilder</Generator>
+      <LastGenOutput>ModelsBuilder.generated.cs</LastGenOutput>
+    </Compile>
+    <Compile Include="PrerecordedEvent.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Product.generated.cs">

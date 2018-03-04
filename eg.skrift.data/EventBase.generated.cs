@@ -20,16 +20,27 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace eg.skrift.data
 {
-	/// <summary>Event</summary>
-	[PublishedContentModel("event")]
-	public partial class Event : PublishedContentModel
+	// Mixin content Type 1144 with alias "eventBase"
+	/// <summary>Event Base</summary>
+	public partial interface IEventBase : IPublishedContent
+	{
+		/// <summary>Event Summary</summary>
+		string EventSummary { get; }
+
+		/// <summary>Event Title</summary>
+		string EventTitle { get; }
+	}
+
+	/// <summary>Event Base</summary>
+	[PublishedContentModel("eventBase")]
+	public partial class EventBase : PublishedContentModel, IEventBase
 	{
 #pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "event";
+		public new const string ModelTypeAlias = "eventBase";
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 #pragma warning restore 0109
 
-		public Event(IPublishedContent content)
+		public EventBase(IPublishedContent content)
 			: base(content)
 		{ }
 
@@ -40,7 +51,7 @@ namespace eg.skrift.data
 		}
 #pragma warning restore 0109
 
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Event, TValue>> selector)
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<EventBase, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
@@ -51,8 +62,11 @@ namespace eg.skrift.data
 		[ImplementPropertyType("eventSummary")]
 		public string EventSummary
 		{
-			get { return this.GetPropertyValue<string>("eventSummary"); }
+			get { return GetEventSummary(this); }
 		}
+
+		/// <summary>Static getter for Event Summary</summary>
+		public static string GetEventSummary(IEventBase that) { return that.GetPropertyValue<string>("eventSummary"); }
 
 		///<summary>
 		/// Event Title: Title of the Event
@@ -60,7 +74,10 @@ namespace eg.skrift.data
 		[ImplementPropertyType("eventTitle")]
 		public string EventTitle
 		{
-			get { return this.GetPropertyValue<string>("eventTitle"); }
+			get { return GetEventTitle(this); }
 		}
+
+		/// <summary>Static getter for Event Title</summary>
+		public static string GetEventTitle(IEventBase that) { return that.GetPropertyValue<string>("eventTitle"); }
 	}
 }

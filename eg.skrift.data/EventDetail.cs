@@ -1,17 +1,16 @@
-﻿using System;
-using Umbraco.Core.Models;
+﻿using Umbraco.Core.Models;
 
 namespace eg.skrift.data
 {
-    public class EventDetail : Event, IEventRating
+    public abstract class EventDetail : EventBase, IEventRating
     {
-        public EventDetail(IPublishedContent content) : base(content)
+        protected EventDetail(IPublishedContent content) : base(content)
         {
         }
 
         /// <summary>
         /// Get the rating from Umbraco
         /// </summary>
-        public int EventRating { get; set; }
+        public abstract int EventRating { get; }
     }
 }
