@@ -265,6 +265,7 @@
     <Compile Include="Home.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="IEventRating.cs" />
     <Compile Include="Image.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
@@ -276,9 +277,9 @@
       <LastGenOutput>ModelsBuilder.generated.cs</LastGenOutput>
     </Compile>
     <Compile Include="ModelsBuilder.generated.cs">
-      <DependentUpon>ModelsBuilder.cs</DependentUpon>
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="NavigationBase.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>

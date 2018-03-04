@@ -22,7 +22,7 @@ namespace eg.skrift.data
 {
 	/// <summary>Event</summary>
 	[PublishedContentModel("event")]
-	public partial class Event : PublishedContentModel, IEventRating
+	public partial class Event : PublishedContentModel
 	{
 #pragma warning disable 0109 // new is redundant
 		public new const string ModelTypeAlias = "event";
@@ -61,15 +61,6 @@ namespace eg.skrift.data
 		public string EventTitle
 		{
 			get { return this.GetPropertyValue<string>("eventTitle"); }
-		}
-
-		///<summary>
-		/// Rating: Event Rating out of 5
-		///</summary>
-		[ImplementPropertyType("rating")]
-		public string Rating
-		{
-			get { return eg.skrift.data.EventRating.GetRating(this); }
 		}
 	}
 }

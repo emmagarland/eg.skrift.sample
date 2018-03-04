@@ -20,17 +20,9 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace eg.skrift.data
 {
-	// Mixin content Type 1147 with alias "eventRating"
-	/// <summary>Event Rating</summary>
-	public partial interface IEventRating : IPublishedContent
-	{
-		/// <summary>Rating</summary>
-		string Rating { get; }
-	}
-
 	/// <summary>Event Rating</summary>
 	[PublishedContentModel("eventRating")]
-	public partial class EventRating : PublishedContentModel, IEventRating
+	public partial class EventRating : PublishedContentModel
 	{
 #pragma warning disable 0109 // new is redundant
 		public new const string ModelTypeAlias = "eventRating";
@@ -59,10 +51,7 @@ namespace eg.skrift.data
 		[ImplementPropertyType("rating")]
 		public string Rating
 		{
-			get { return GetRating(this); }
+			get { return this.GetPropertyValue<string>("rating"); }
 		}
-
-		/// <summary>Static getter for Rating</summary>
-		public static string GetRating(IEventRating that) { return that.GetPropertyValue<string>("rating"); }
 	}
 }
