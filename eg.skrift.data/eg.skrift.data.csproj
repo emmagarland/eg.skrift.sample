@@ -230,85 +230,88 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Blog.generated.cs">
-      <DependentUpon>ModelsBuilder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Blogpost.generated.cs">
-      <DependentUpon>ModelsBuilder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Contact.generated.cs">
-      <DependentUpon>ModelsBuilder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ContentBase.generated.cs">
-      <DependentUpon>ModelsBuilder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ContentPage.generated.cs">
-      <DependentUpon>ModelsBuilder.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\EventController.cs" />
-    <Compile Include="EventBase.generated.cs">
+    <Compile Include="Models\Blog.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="EventDetail.cs" />
-    <Compile Include="EventRating.generated.cs">
+    <Compile Include="Models\Blogpost.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Feature.generated.cs">
+    <Compile Include="Models\Contact.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="File.generated.cs">
+    <Compile Include="Models\ContentBase.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Folder.generated.cs">
+    <Compile Include="Models\ContentPage.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home.generated.cs">
+    <Compile Include="Models\EventBase.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="IEventRating.cs" />
-    <Compile Include="Image.generated.cs">
+    <Compile Include="Models\EventDetail.cs" />
+    <Compile Include="Models\EventRating.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterviewEvent.generated.cs">
+    <Compile Include="Models\Feature.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="LiveEvent.generated.cs">
+    <Compile Include="Models\File.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Member.generated.cs">
+    <Compile Include="Models\Folder.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModelsBuilder.generated.cs">
-      <DependentUpon>ModelsBuilder.cs</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Include="NavigationBase.generated.cs">
+    <Compile Include="Models\Home.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="People.generated.cs">
+    <Compile Include="Models\IEventRating.cs" />
+    <Compile Include="Models\Image.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Person.generated.cs">
+    <Compile Include="Models\InterviewEvent.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="PrerecordedEvent.cs" />
-    <Compile Include="InterviewEvent.cs" />
-    <Compile Include="LiveEvent.cs" />
-    <Compile Include="ModelsBuilder.cs">
+    <Compile Include="Models\LiveEvent.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Member.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelsBuilder.cs">
       <Generator>UmbracoModelsBuilder</Generator>
       <LastGenOutput>ModelsBuilder.generated.cs</LastGenOutput>
     </Compile>
-    <Compile Include="PrerecordedEvent.generated.cs">
+    <Compile Include="Models\ModelsBuilder.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Product.generated.cs">
+    <Compile Include="Models\NavigationBase.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Products.generated.cs">
+    <Compile Include="Models\People.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Person.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PrerecordedEvent.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Product.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Products.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PrerecordedEvent.cs" />
+    <Compile Include="Models\InterviewEvent.cs" />
+    <Compile Include="Models\LiveEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IHaveRatings.cs" />
+    <Compile Include="Services\IRatingsService.cs" />
+    <Compile Include="Services\IStoreRatings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

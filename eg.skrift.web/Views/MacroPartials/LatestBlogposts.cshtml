@@ -1,8 +1,8 @@
-﻿@using ContentModels = Umbraco.Web.PublishedContentModels;
-@using Umbraco.Web;
+﻿@using eg.skrift.data.Models
+@using ContentModels = Umbraco.Web.PublishedContentModels;
 @inherits Umbraco.Web.Macros.PartialViewMacroPage
 @{ 
-    var startNodeId = Model.MacroParameters["startNodeId"] != null ? Model.MacroParameters["startNodeId"] : Model.Content.Id;
+    var startNodeId = Model.MacroParameters["startNodeId"] ?? Model.Content.Id;
     var numberOfPosts = 3;
     if (Model.MacroParameters["numberOfPosts"] != null)
     {
@@ -19,7 +19,7 @@
     {
         <div class="blogposts">
 
-            @foreach (ContentModels.Blogpost post in blogposts)
+            @foreach (Blogpost post in blogposts)
             {
                 <a href="@post.Url" class="blogpost">
                     <div class="blogpost-meta">
