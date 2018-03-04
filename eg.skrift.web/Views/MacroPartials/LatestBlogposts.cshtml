@@ -1,37 +1,41 @@
-﻿@using eg.skrift.data.Models
-@using ContentModels = Umbraco.Web.PublishedContentModels;
+﻿@using System.Web.Mvc.Html
+@using eg.skrift.data.Models
+@using Our.Umbraco.Ditto
 @inherits Umbraco.Web.Macros.PartialViewMacroPage
-@{ 
+@{
     var startNodeId = Model.MacroParameters["startNodeId"] ?? Model.Content.Id;
     var numberOfPosts = 3;
     if (Model.MacroParameters["numberOfPosts"] != null)
     {
         int.TryParse((string)Model.MacroParameters["numberOfPosts"], out numberOfPosts);
     }
- }
-@if (startNodeId != null)
-{
-    @* Get the starting page *@
-    var startNode = Umbraco.TypedContent(startNodeId);
-    var blogposts = startNode.Children.OrderByDescending(x => x.CreateDate).Take(numberOfPosts);
-
-    if (blogposts.Any())
+}
+@{
     {
-        <div class="blogposts">
+        /* Get the starting page */
+        var startNode = Umbraco.TypedContent(startNodeId);
+        var blogposts = startNode.Children.OrderByDescending(x => x.CreateDate).Take(numberOfPosts);
 
-            @foreach (Blogpost post in blogposts)
-            {
-                <a href="@post.Url" class="blogpost">
-                    <div class="blogpost-meta">
-                        <small class="blogpost-date">@post.CreateDate.ToShortDateString()</small>
-                        <small class="blogpost-cat">
-                            @Html.Partial("~/Views/Partials/CategoryLinks.cshtml", post.Categories)
-                        </small>
-                    </div>
-                    <h3 class="blogpost-title">@post.PageTitle</h3>
-                    <div class="blogpost-excerpt">@post.Excerpt</div>
-                </a>
-            }
-        </div>
+        var publishedContents = blogposts as IPublishedContent[] ?? blogposts.ToArray();
+        if (publishedContents.Any())
+        {
+            <div class="blogposts">
+
+                @foreach (var publishedContent in publishedContents)
+                {
+                    var post = publishedContent.As<Blogpost>();
+                    <a href="@post.Url" class="blogpost">
+                        <div class="blogpost-meta">
+                            <small class="blogpost-date">@post.CreateDate.ToShortDateString()</small>
+                            <small class="blogpost-cat">
+                                @Html.Partial("~/Views/Partials/CategoryLinks.cshtml", post.Categories)
+                            </small>
+                        </div>
+                        <h3 class="blogpost-title">@post.PageTitle</h3>
+                        <div class="blogpost-excerpt">@post.Excerpt</div>
+                    </a>
+                }
+            </div>
+        }
     }
 }

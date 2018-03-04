@@ -40,11 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factories\IRatingsServiceFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IHaveRatings.cs" />
     <Compile Include="Services\IRatingsService.cs" />
     <Compile Include="Services\IStoreRatings.cs" />
     <Compile Include="Services\RatingsService.cs" />
+    <Compile Include="Factories\RatingsServiceFactory.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

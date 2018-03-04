@@ -1,13 +1,22 @@
 ﻿@inherits UmbracoTemplatePage<eg.skrift.data.Models.EventDetail>
-<div id="event">
-    <div class="container-fluid" id="event">
-        @if (Model != null)
-        {
-            <div class="rating">
-                <h1>@Model.Content.EventTitle</h1>
-                <h2>@Model.Content.EventSummary</h2>
-                <b>Event Rating: @Model.Content.EventTitle</b>
+@{
+    Layout = "Master.cshtml";
+}
+@Html.Partial("~/Views/Partials/SectionHeader.cshtml")
+
+<section class="section">
+    <div class="container">
+        <div class="row">7
+            <div class="col-md-6">
+                @if (Model != null)
+                {
+                    <div class="rating">
+                        <h2>@Model.Content.EventTitle</h2>
+                        <p class="compat-msg">@Model.Content.EventSummary</p>
+                        <b>Event Rating: @Model.Content.EventTitle</b>
+                    </div>
+                }
             </div>
-        }
+        </div>
     </div>
-</div>
+</section>

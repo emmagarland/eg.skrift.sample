@@ -1,5 +1,6 @@
 ﻿@inherits UmbracoTemplatePage<People>
 @using eg.skrift.data.Models
+@using Our.Umbraco.Ditto
 @{
     Layout = "Master.cshtml";
 }
@@ -27,8 +28,9 @@
         </nav>
         -->
         <div class="employee-grid">
-            @foreach (Person person in Model.Content.Children)
+            @foreach (var publishedContent in Model.Content.Children)
             {
+                var person = publishedContent.As<Person>();
 
                 <div class="employee-grid__item">
                     <div class="employee-grid__item__image" style="background-image: url('@person.Photo.Url')"></div>
@@ -49,5 +51,4 @@
             }
         </div>
     </div>
-
 </section>
