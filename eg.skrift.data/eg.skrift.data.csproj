@@ -295,7 +295,7 @@
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\InterviewEventViewModel.cs" />
-    <Compile Include="Models\LiveEvent.cs" />
+    <Compile Include="Models\LiveEventViewModel.cs" />
     <Compile Include="Models\LiveEvent.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
@@ -314,7 +314,7 @@
     <Compile Include="Models\Person.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\PrerecordedEvent.cs" />
+    <Compile Include="Models\PrerecordedEventViewModel.cs" />
     <Compile Include="Models\PrerecordedEvent.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>

@@ -1,17 +1,10 @@
-﻿using Umbraco.Core.Models;
-
-namespace eg.skrift.data.Models
+﻿namespace eg.skrift.data.Models
 {
-    public class PrerecordedEventViewModel : EventDetail
+    public partial class PrerecordedEvent: IEventDetail
     {
-        public PrerecordedEventViewModel(IPublishedContent content) : base(content)
-        {
-        }
-
-        public override int EventRating
+        public int EventRating
         {
             get => GetEventRating();
-            set { }
         }
 
         /// <summary>

@@ -11,12 +11,12 @@ using Umbraco.Web.Mvc;
 
 namespace eg.skrift.data.Controllers
 {
-    public class EventBaseController : RenderMvcController
+    public class EventDetailController : RenderMvcController
     {
         internal new ILogger Logger;
         private IRatingsService ratingsService;
 
-        public EventBaseController(ILoggerFactory loggerFactory, IRatingsServiceFactory ratingsServiceFactory)
+        public EventDetailController(ILoggerFactory loggerFactory, IRatingsServiceFactory ratingsServiceFactory)
         {
             if (loggerFactory == null) throw new ArgumentNullException(nameof(loggerFactory));
             InitaliseLogger(loggerFactory);

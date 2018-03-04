@@ -1,4 +1,4 @@
-﻿@inherits UmbracoTemplatePage<eg.skrift.data.Models.EventDetail>
+﻿@inherits UmbracoTemplatePage<eg.skrift.data.Models.IEventDetail>
 @{
     Layout = "Master.cshtml";
 }
@@ -13,7 +13,7 @@
                     <div class="rating">
                         <h2>@Model.Content.EventTitle</h2>
                         <p class="compat-msg">@Model.Content.EventSummary</p>
-                        <b>Event Rating: @Model.Content.EventTitle</b>
+                        <b>Event Rating: @Model.Content.EventRating</b>
                     </div>
                 }
             </div>
