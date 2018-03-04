@@ -42,25 +42,6 @@ namespace eg.skrift.data.Controllers
         public override ActionResult Index(RenderModel model)
         {
             var typedModel = model.As<EventDetail>();
-            //switch (typedModel.DocumentTypeAlias)
-            //{
-            //    case LiveEvent.ModelTypeAlias:
-            //    {
-            //        typedModel = model.As<LiveEventViewModel>();
-            //        break;
-            //    }
-            //    case InterviewEvent.ModelTypeAlias:
-            //    {
-            //        typedModel = model.As<InterviewEventViewModel>();
-            //        break;
-            //    }
-            //    case PrerecordedEvent.ModelTypeAlias:
-            //    {
-            //        typedModel = model.As<PrerecordedEventViewModel>();
-            //        break;
-            //    }
-            //}
-
             typedModel.EventRating = ratingsService.GetRating(typedModel.Id);
             return CurrentTemplate(typedModel);
         }

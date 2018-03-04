@@ -4,7 +4,6 @@ using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
-using eg.skrift.businesslogic.Factories;
 using eg.skrift.businesslogic.Services;
 using eg.skrift.data.Factories;
 using Umbraco.Web;
@@ -12,7 +11,13 @@ using Umbraco.Web;
 namespace eg.skrift.data.CMS
 {
     public class Global : UmbracoApplication
-    {
+    { 
+        /// <summary>
+        /// Registers our controllers and Umbraco controllers, plus the types we need to resolve, 
+        /// and sets up MVC to use Autofac as a dependency resolver as our DI Container of choice
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected override void OnApplicationStarted(object sender, EventArgs e)
         {
             base.OnApplicationStarted(sender, e);
@@ -29,7 +34,7 @@ namespace eg.skrift.data.CMS
             builder.RegisterType<UmbracoContentFetcherFactory>()
                 .As<IContentFetcherFactory>();
             builder.RegisterType<RatingsServiceFactory>()
-                .As<IRatingsServiceFactory>();
+                .As<IRatingsService>();
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
             GlobalConfiguration.Configuration.DependencyResolver = new AutofacWebApiDependencyResolver(container);

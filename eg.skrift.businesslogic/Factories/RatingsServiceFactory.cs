@@ -1,6 +1,6 @@
-using eg.skrift.businesslogic.Services;
+using eg.skrift.businesslogic.Factories;
 
-namespace eg.skrift.businesslogic.Factories
+namespace eg.skrift.businesslogic.Services
 {
     public class RatingsServiceFactory : IRatingsServiceFactory
     {
