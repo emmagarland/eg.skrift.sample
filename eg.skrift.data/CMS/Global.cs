@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
+using eg.skrift.businesslogic.Factories;
 using eg.skrift.businesslogic.Services;
 using eg.skrift.data.Factories;
 using Umbraco.Web;
@@ -34,7 +35,7 @@ namespace eg.skrift.data.CMS
             builder.RegisterType<UmbracoContentFetcherFactory>()
                 .As<IContentFetcherFactory>();
             builder.RegisterType<RatingsServiceFactory>()
-                .As<IRatingsService>();
+                .As<IRatingsServiceFactory>();
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
             GlobalConfiguration.Configuration.DependencyResolver = new AutofacWebApiDependencyResolver(container);
