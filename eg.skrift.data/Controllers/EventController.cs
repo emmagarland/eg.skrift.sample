@@ -20,8 +20,7 @@ namespace eg.skrift.data.Controllers
         }
 
         /// <summary>
-        /// Legacy: Gets the rating for an event
-        /// Used in earlier code example
+        /// Gets the rating for an event
         /// </summary>
         /// <returns></returns>
         private int GetEventRating()
