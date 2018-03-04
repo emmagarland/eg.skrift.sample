@@ -10,6 +10,5 @@
         /// </summary>
         /// <returns></returns>
         private int GetEventRating() => 5;
-
     }
 }
