@@ -42,6 +42,7 @@ namespace eg.skrift.data.Controllers
         public override ActionResult Index(RenderModel model)
         {
             var typedModel = model.As<EventDetail>();
+            if (ratingsService != null) typedModel.EventRating = ratingsService.GetRating(typedModel.Id);
             return CurrentTemplate(typedModel);
         }
     }
