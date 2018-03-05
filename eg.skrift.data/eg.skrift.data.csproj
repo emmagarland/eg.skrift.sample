@@ -246,7 +246,10 @@
     <Compile Include="CMS\ILogger.cs" />
     <Compile Include="CMS\ILoggerFactory.cs" />
     <Compile Include="CMS\UmbracoLogger.cs" />
-    <Compile Include="Controllers\EventDetailController.cs" />
+    <Compile Include="Controllers\PrerecordedEventController.cs" />
+    <Compile Include="Controllers\LiveEventController.cs" />
+    <Compile Include="Controllers\InterviewEventController.cs" />
+    <Compile Include="Controllers\EventBaseController.cs" />
     <Compile Include="CMS\Global.cs" />
     <Compile Include="Factories\IContentFetcherFactory.cs" />
     <Compile Include="CMS\IUmbracoContentFetcher.cs" />

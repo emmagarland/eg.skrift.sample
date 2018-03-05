@@ -11,17 +11,22 @@ using Umbraco.Web.Mvc;
 
 namespace eg.skrift.data.Controllers
 {
-    public class EventDetailController : RenderMvcController
+    public class EventBaseController : RenderMvcController
     {
         internal new ILogger Logger;
         private IRatingsService ratingsService;
 
-        public EventDetailController(ILoggerFactory loggerFactory, IRatingsServiceFactory ratingsServiceFactory)
+        public EventBaseController(ILoggerFactory loggerFactory, IRatingsServiceFactory ratingsServiceFactory)
         {
             if (loggerFactory == null) throw new ArgumentNullException(nameof(loggerFactory));
             InitaliseLogger(loggerFactory);
             if (ratingsServiceFactory == null) throw new ArgumentNullException(nameof(loggerFactory));
             InitaliseRatingsService(ratingsServiceFactory);
+        }
+
+        protected EventBaseController()
+        {
+            
         }
 
         private void InitaliseRatingsService(IRatingsServiceFactory ratingsServiceFactory)
@@ -42,7 +47,6 @@ namespace eg.skrift.data.Controllers
         public override ActionResult Index(RenderModel model)
         {
             var typedModel = model.As<EventDetail>();
-            typedModel.EventRating = ratingsService.GetRating(typedModel.Id);
             return CurrentTemplate(typedModel);
         }
     }

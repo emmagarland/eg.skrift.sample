@@ -6,7 +6,9 @@ using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
 using eg.skrift.businesslogic.Factories;
 using eg.skrift.businesslogic.Services;
+using eg.skrift.data.Controllers;
 using eg.skrift.data.Factories;
+using eg.skrift.data.Models;
 using Umbraco.Web;
 
 namespace eg.skrift.data.CMS
@@ -40,5 +42,9 @@ namespace eg.skrift.data.CMS
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
             GlobalConfiguration.Configuration.DependencyResolver = new AutofacWebApiDependencyResolver(container);
         }
+    }
+
+    public class PrerecordedEventController
+    {
     }
 }
