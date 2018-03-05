@@ -33,3 +33,8 @@ Rebuild all and all the required nuget packages will be installed.
 
 - Username: emmagarland77+77@gmail.com
 - Password: E&6^hM3d@:
+
+### Author ###
+
+- [Emma Garland](https://emmagarland.com/)
+- [Twitter](http://twitter.com/emmagarland)
