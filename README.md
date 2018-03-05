@@ -16,7 +16,7 @@ The code is used to provide examples for following **SOLID** principles in CMS d
 
 Umbraco is only referenced from the web and data projects. Business logic should have no knowledge of Umbraco.
 
-The solution uses AutoFac as the **DI Container**
+The solution uses [AutoFac](https://autofac.org/) as the **DI Container**
 
 Rebuild all and the nuget packages will be installed. 
 
