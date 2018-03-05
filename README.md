@@ -1,5 +1,5 @@
 # eg.skrift.sample
-## Sample code for Skrift Article March 2018: "SOLID CMS: SOLID Principles in CMS Development"##
+## Sample code for Skrift Article March 2018: "SOLID CMS: SOLID Principles in CMS Development" ##
 
 This solution includes a default Umbraco install with the example code as described in the Skrift article
 
