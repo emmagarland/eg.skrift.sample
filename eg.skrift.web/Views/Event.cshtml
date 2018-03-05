@@ -1,19 +1,21 @@
 ﻿@inherits UmbracoTemplatePage<eg.skrift.data.Models.IEventDetail>
 @{
     Layout = "Master.cshtml";
+    int maxRating = 5;
 }
 @Html.Partial("~/Views/Partials/SectionHeader.cshtml")
 
 <section class="section">
     <div class="container">
-        <div class="row">7
+        <div class="row">
+            7
             <div class="col-md-6">
                 @if (Model != null)
                 {
                     <div class="rating">
                         <h2>@Model.Content.EventTitle</h2>
                         <p class="compat-msg">@Model.Content.EventSummary</p>
-                        <b>Event Rating: @Model.Content.EventRating</b>
+                        <b>Event Rating: @Model.Content.EventRating/@maxRating</b>
                     </div>
                 }
             </div>
