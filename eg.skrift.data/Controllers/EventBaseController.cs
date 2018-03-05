@@ -24,11 +24,6 @@ namespace eg.skrift.data.Controllers
             InitaliseRatingsService(ratingsServiceFactory);
         }
 
-        protected EventBaseController()
-        {
-            
-        }
-
         private void InitaliseRatingsService(IRatingsServiceFactory ratingsServiceFactory)
         {
             ratingsService = ratingsServiceFactory.Create();

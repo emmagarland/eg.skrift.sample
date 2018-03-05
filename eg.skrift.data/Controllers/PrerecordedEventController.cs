@@ -5,10 +5,6 @@ namespace eg.skrift.data.Controllers
 {
     public class PrerecordedEventController : EventBaseController
     {
-        public PrerecordedEventController()
-        {
-        }
-
         public PrerecordedEventController(ILoggerFactory loggerFactory, IRatingsServiceFactory ratingsServiceFactory) : base(loggerFactory, ratingsServiceFactory)
         {
         }
