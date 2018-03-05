@@ -29,7 +29,7 @@ Umbraco is only referenced from the web and data projects. The business logic pr
 
 Rebuild all and all the required nuget packages will be installed. 
 
-### Umbraco login details are: ###
+### Umbraco Login Details###
 
-<br/>Username: emmagarland77+77@gmail.com
-<br/>Password: E&6^hM3d@:
+- Username: emmagarland77+77@gmail.com
+- Password: E&6^hM3d@:
