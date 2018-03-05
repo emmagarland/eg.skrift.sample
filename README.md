@@ -37,4 +37,4 @@ Rebuild all and all the required nuget packages will be installed.
 ### Author ###
 
 - [Emma Garland](https://emmagarland.com/)
-- [Twitter](http://twitter.com/emmagarland)
+- [eg Twitter](http://twitter.com/emmagarland)
