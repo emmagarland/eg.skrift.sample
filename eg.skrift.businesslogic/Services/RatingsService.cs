@@ -12,7 +12,7 @@
         /// <returns></returns>
         public int GetRating(int eventId)
         {
-            //TODO: implement functionality
+            //TODO: implement actual rating functionality
             return 5;
         }
 

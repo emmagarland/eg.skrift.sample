@@ -2,13 +2,6 @@
 {
     public partial class LiveEvent : IEventDetail
     {
-        public int EventRating => GetEventRating();
-
-        /// <summary>
-        /// Gets the rating for an event.
-        /// TODO: get average event rating for live event here
-        /// </summary>
-        /// <returns></returns>
-        private int GetEventRating() => 5;
+        public int EventRating { get; }
     }
 }
