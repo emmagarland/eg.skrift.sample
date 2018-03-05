@@ -23,7 +23,7 @@ Umbraco is only referenced from the web and data projects. Business logic should
 
 - The unit tests use [Nunit](http://nunit.org/)
 - The solution uses [AutoFac](https://autofac.org/) as the **DI Container**
-- ModelsBuilder is used via the API and in the separate eg.skrift.data project
+- [ModelsBuilder](https://our.umbraco.org/documentation/reference/templating/modelsbuilder/) is used via the API and in the separate eg.skrift.data project
 - [UmbracoCms.Core](https://www.nuget.org/packages/UmbracoCms.Core/) and [Terratype](https://our.umbraco.org/projects/backoffice-extensions/terratype/) are explicitly installed in the eg.skrift.data project
 - [UmbracoCms](https://www.nuget.org/packages/UmbracoCms) is installed in the web project
 
