@@ -295,10 +295,10 @@
     <Compile Include="Models\Image.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\InterviewEvent.cs" />
     <Compile Include="Models\InterviewEvent.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\InterviewEvent.cs" />
     <Compile Include="Models\LiveEvent.cs" />
     <Compile Include="Models\LiveEvent.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
@@ -308,6 +308,12 @@
     </Compile>
     <Compile Include="Models\ModelsBuilder.cs">
       <Generator>UmbracoModelsBuilder</Generator>
+      <LastGenOutput>ModelsBuilder.generated.cs</LastGenOutput>
+    </Compile>
+    <Compile Include="Models\ModelsBuilder.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\NavigationBase.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
