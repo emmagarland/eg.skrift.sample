@@ -17,7 +17,7 @@ The solution is composed of 4 projects:
 - eg.skrift.businesslogic
 - eg.skrift.businesslogic.tests
 
-Umbraco is only referenced from the web and data projects. Business logic should have no knowledge of Umbraco.
+Umbraco is only referenced from the web and data projects. The business logic project should have no knowledge of Umbraco, only getting its dependencies via **Dependency Injection**.
 
 ### Dependencies ###
 
