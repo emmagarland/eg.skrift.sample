@@ -260,6 +260,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Umbraco.sdf" />
     <Content Include="App_Plugins\Terratype\Css\label.standard.css" />
     <Content Include="App_Plugins\Terratype\Images\Terratype.png" />
     <Content Include="App_Plugins\Terratype\Lang\en-us.xml" />
